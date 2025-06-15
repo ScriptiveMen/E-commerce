@@ -133,7 +133,7 @@ const NavBar = () => {
   );
 
   return (
-    <div className="sticky bg-[#fdfbf5] top-0 left-0 w-full mb-5 flex items-center justify-between border-b pb-1 md:py-2">
+    <div className="sticky z-500 bg-[#fdfbf5] top-0 left-0 w-full mb-5 flex items-center justify-between border-b pb-1 md:py-2">
       <div className="text-xl md:text-3xl  font-bold tracking-tight">
         Fyndora
       </div>
@@ -163,7 +163,7 @@ const NavBar = () => {
                 }`
               }
             >
-              Cart(0)
+              Cart({user?.cart?.length > 0 ? user?.cart?.length : 0})
             </NavLink>
           </>
         )}
@@ -180,7 +180,7 @@ const NavBar = () => {
         </NavLink>
 
         <div
-          className={`fixed top-0 pb-1 right-0 h-full w-[100%] z-50 bg-[#fdfbf5] transition-transform duration-300 ease-in-out px-3 shadow
+          className={`fixed top-0 pb-1 right-0 h-full w-[100%] z-[100] bg-[#fdfbf5] transition-transform duration-300 ease-in-out px-3 shadow
     ${isOpen ? "translate-x-0" : "translate-x-full"}
   `}
         >
