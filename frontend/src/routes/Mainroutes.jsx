@@ -1,12 +1,12 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
+import Home from "../pages/user/Home";
 import Products from "../pages/user/Products";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PageNotFound from "../pages/PageNotFound";
 import ProductDetails from "../pages/ProductDetail";
 import UnAuthorised from "../pages/UnAuthorised";
-import About from "../pages/About";
+import About from "../pages/user/About";
 import Profile from "../pages/user/Profile";
 import Cart from "../pages/user/Cart";
 import AddProduct from "../pages/admin/AddProduct";

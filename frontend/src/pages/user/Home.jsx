@@ -57,14 +57,14 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="hero2 h-[20vh] md:h-[50vh]  my-9 md:my-15 w-full flex items-center gap-2 relative z-0">
+      <div className="hero2 h-[20vh] md:h-[50vh]  my-9 md:my-16 w-full flex items-center gap-2 relative z-0">
         <div className="w-[40%] h-full rounded-2xl overflow-hidden relative z-0">
           <img
-            className="h-full w-full object-cover rounded-2xl"
-            src="https://plus.unsplash.com/premium_photo-1682095659073-e9150c144092?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D"
+            className="h-full w-full object-cover rounded-2xl object-top"
+            src="/images/hero1-1.avif"
             alt=""
           />
-          <Link className="border border-gray-500 bg-gray-200 px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold hover:scale-95 duration-200">
+          <Link className="border border-white text-white px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold transition-all duration-400 ease-in-out hover:bg-white hover:text-black">
             Buy now
           </Link>
 
@@ -74,32 +74,32 @@ const Home = () => {
         </div>
         <div className="w-[30%] h-full rounded-2xl  z-0  overflow-hidden relative">
           <img
-            className="h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1563962585448-ec03efbcadb8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM1fHx8ZW58MHx8fHx8"
+            className="h-full w-full object-cover object-left"
+            src="/images/hero1-2.avif"
             alt=""
           />
-          <Link className="border border-gray-500 bg-gray-200 px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold hover:scale-95 duration-200">
+          <Link className="border border-white text-white px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold transition-all duration-400 ease-in-out hover:bg-white hover:text-black">
             Buy now
           </Link>
         </div>
         <div className="w-[30%] h-full rounded-2xl z-10  overflow-hidden relative">
           <img
             className="h-full w-full object-cover"
-            src="https://plus.unsplash.com/premium_photo-1726869684224-1a740e3f3880?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D"
+            src="/images/hero1-3.avif"
             alt=""
           />
 
-          <Link className="border border-gray-500 bg-gray-200 px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold hover:scale-95 duration-200">
+          <Link className="border border-white text-white px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold transition-all duration-400 ease-in-out hover:bg-white hover:text-black">
             Buy now
           </Link>
         </div>
       </div>
 
-      <hr className="text-gray-400" />
+      <hr />
 
-      <div className="hero3 mt-5 md:mt-15  w-full flex items-center justify-between gap-2">
+      <div className="hero3 mt-9 md:mt-15  w-full flex items-center justify-between gap-2">
         <div className="left  flex flex-col w-[58%]  gap-3 md:gap-6">
-          <Link className="text-sm px-3 w-max py-1 rounded-3xl border border-gray-300 md:text-lg">
+          <Link className="transition-all duration-400 ease-in-out hover:bg-black hover:text-white text-sm px-3 w-max py-1 rounded-3xl border border-gray-300 md:text-lg">
             See More product
           </Link>
           <h1 className="text-2xl pb-5 font-black md:text-5xl md:w-[47%]">
@@ -112,39 +112,39 @@ const Home = () => {
             we do not divide our collectios to seasons we create new models
             every week.
           </p>
-          <Link className="text-sm px-3 py-1 w-max rounded-3xl border border-gray-300 md:text-lg">
+          <Link className="transition-all duration-400 ease-in-out hover:bg-black hover:text-white text-sm px-3 py-1 w-max rounded-3xl border border-gray-300 md:text-lg">
             Shop Now
           </Link>
         </div>
       </div>
 
       <div className="hero4 h-[20vh] md:h-[50vh]  my-9 md:my-15 w-full flex items-end gap-4 relative z-0 ">
-        <div className="w-full h-[80%] rounded-2xl overflow-hidden relative z-0 transition-transform duration-500 ease-in-out hover:-translate-y-2 cursor-pointer">
+        <div className="w-full h-[80%] rounded-2xl overflow-hidden relative z-0 transition-transform duration-500 ease-in-out hover:-translate-y-4 cursor-pointer">
           <img
             className="h-full w-full object-cover rounded-2xl"
-            src="https://images.unsplash.com/photo-1600075109996-73046c8aecf2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3VtbWVyJTIwZ3JpbGVzJTIwZHJlc3N8ZW58MHx8MHx8fDA%3D"
+            src="/images/hero2-1.avif"
             alt=""
           />
         </div>
-        <div className="w-full h-full rounded-2xl  z-0  overflow-hidden relative transition-transform duration-500 ease-in-out hover:-translate-y-2 cursor-pointer">
+        <div className="w-full h-full rounded-2xl  z-0  overflow-hidden relative transition-transform duration-500 ease-in-out hover:-translate-y-4 cursor-pointer">
           <img
             className="h-full w-full object-cover"
-            src="https://plus.unsplash.com/premium_photo-1661478106266-5b4fd8b976c0?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c3VtbWVyJTIwY2xvdGh8ZW58MHx8MHx8fDA%3D"
+            src="/images/hero2-2.avif"
             alt=""
           />
         </div>
 
-        <div className="w-full h-[75%] rounded-2xl z-10  overflow-hidden relative transition-transform duration-500 ease-in-out hover:-translate-y-2 cursor-pointer">
+        <div className="w-full h-[75%] rounded-2xl z-10  overflow-hidden relative transition-transform duration-500 ease-in-out hover:-translate-y-4 cursor-pointer">
           <img
             className="h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1625708458528-802ec79b1ed8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2F0ZXIlMjBib3R0bGV8ZW58MHx8MHx8fDA%3D"
+            src="/images/hero2-3.avif"
             alt=""
           />
         </div>
-        <div className="w-full h-[70%] rounded-2xl z-10  overflow-hidden relative transition-transform duration-500 ease-in-out hover:-translate-y-2 cursor-pointer">
+        <div className="w-full h-[70%] rounded-2xl z-10  overflow-hidden relative transition-transform duration-500 ease-in-out hover:-translate-y-4 cursor-pointer">
           <img
             className="h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1720534490358-bc2ad29d51d5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNhcHxlbnwwfHwwfHx8MA%3D%3D"
+            src="/images/hero2-4.avif"
             alt=""
           />
         </div>

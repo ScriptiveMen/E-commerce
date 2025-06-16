@@ -29,12 +29,12 @@
         },
         {
           "product": {
-            "id": "MRajcTf7lO4nb0BeJczNl",
-            "title": "hdhdheueue",
-            "price": "999",
-            "description": "hdhdhdjjdj",
-            "category": "woman's clothing",
-            "image": "https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvbiUyMGRyZXNzfGVufDB8fDB8fHww"
+            "id": "0",
+            "title": "Mens Cotton Jacket",
+            "price": 55.99,
+            "description": "Stay stylish and comfortable with our Men's Cotton Jacket, designed for all-season wear. Made from premium-quality cotton, this jacket offers a breathable, soft-touch feel while ensuring durability and long-lasting use. The lightweight fabric makes it ideal for spring, autumn, and mild winter days, providing just the right amount of warmth without overheating. It features a classic front zipper closure, multiple spacious pockets for utility and convenience, and a sleek collar design for a modern look. The inner lining adds extra comfort, while adjustable cuffs offer a customized fit. Available in a range of neutral colors and sizes, this jacket easily pairs with jeans, chinos, or casual trousers, making it a versatile addition to any wardrobe. Whether you're heading to work, traveling, or enjoying a casual day out, this cotton jacket combines functionality and fashion effortlessly. It's the perfect everyday outerwear for the modern man.",
+            "category": "men's clothing",
+            "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
           },
           "quantity": 1
         }
