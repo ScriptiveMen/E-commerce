@@ -43,7 +43,7 @@ const ItemsCard = (props) => {
   };
 
   return (
-    <div className="h-24 w-full md:w-[70%] py-3 flex gap-2 items-center px-2 rounded bg-gray-300">
+    <div className="h-24 w-full  py-3 flex gap-2 items-center px-2 rounded bg-[#eae8e1]">
       <div className="h-20 w-20 rounded-lg">
         <img
           className="h-full w-full object-cover rounded-lg"
@@ -52,14 +52,16 @@ const ItemsCard = (props) => {
         />
       </div>
       <div className="flex flex-col w-full h-full rounded-lg overflow-hidden  px-2 items-center justify-center gap-2 ">
-        <div className="top w-full  flex items-center justify-between px-5">
-          <span className="font-bold">Name</span>
-          <span className="pl-15 md:pl-85">Total Price</span>
-          <span className="font-bold">Quantity</span>
+        <div className="top w-full   flex items-center justify-between px-5">
+          <span className="font-black">Name</span>
+          <span className="font-black">Quantity</span>
         </div>
         <div className="bottom flex items-center justify-between w-full ">
-          <div className="w-[40%] overflow-hidden">{title}</div>
-          <div>
+          <div className="w-[40%] overflow-hidden relative">{title}</div>
+          <div className="relative pr-4">
+            <span className="absolute -top-11 md:-top-9 -left-3 w-max font-black">
+              Total Price
+            </span>
             <span> &#8377;</span>
             {price * product.quantity}
           </div>

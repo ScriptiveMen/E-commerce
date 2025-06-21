@@ -65,13 +65,13 @@ const ProductDetail = () => {
                   onClick={() =>
                     navigate(`/admin/update-product/${singleproduct.id}`)
                   }
-                  className="bg-black text-white text-xl w-[30%] rounded py-2"
+                  className="bg-black text-white text-xl w-[30%] rounded py-2 hover:scale-95 duration-200 cursor-pointer"
                 >
                   Update
                 </button>
                 <button
                   onClick={DeleteHandler}
-                  className="bg-red-700 text-white text-xl w-[30%] rounded py-2"
+                  className="bg-red-700 text-white text-xl w-[30%] rounded py-2 hover:scale-95 duration-200 cursor-pointer"
                 >
                   Delete
                 </button>

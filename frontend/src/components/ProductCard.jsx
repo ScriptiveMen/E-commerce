@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { asyncUpdateUser } from "../store/actions/UsersAction";
+import { toast } from "react-toastify";
 
 const ProductCard = (props) => {
   const { id, title, image, category, price } = props.product;
@@ -10,19 +11,24 @@ const ProductCard = (props) => {
   const dispatch = useDispatch();
 
   const CartHandler = (product) => {
-    const copyuser = { ...user, cart: [...user.cart] };
-    const x = copyuser.cart.findIndex((c) => c.product?.id == product.id);
+    if (user) {
+      const copyuser = { ...user, cart: [...user.cart] };
+      const x = copyuser.cart.findIndex((c) => c.product?.id == product.id);
 
-    if (x == -1) {
-      copyuser.cart.push({ product, quantity: 1 });
+      if (x == -1) {
+        copyuser.cart.push({ product, quantity: 1 });
+      } else {
+        copyuser.cart[x] = {
+          product,
+          quantity: copyuser.cart[x].quantity + 1,
+        };
+      }
+
+      dispatch(asyncUpdateUser(copyuser.id, copyuser));
     } else {
-      copyuser.cart[x] = {
-        product,
-        quantity: copyuser.cart[x].quantity + 1,
-      };
+      toast.error("Please Login first!");
+      navigate("/login");
     }
-
-    dispatch(asyncUpdateUser(copyuser.id, copyuser));
   };
 
   return (

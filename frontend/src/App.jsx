@@ -4,6 +4,7 @@ import Mainroutes from "./routes/Mainroutes";
 import { asyncCurrentUser } from "./store/actions/UsersAction";
 import { useDispatch } from "react-redux";
 import { asyncLoadProducts } from "./store/actions/ProductsAction";
+import Footer from "./components/Footer";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ const App = () => {
     <div className="relative px-3 *:bg-[#fdfbf5] w-full md:py-4 md:px-6 ">
       <NavBar />
       <Mainroutes />
+      <Footer />
     </div>
   );
 };

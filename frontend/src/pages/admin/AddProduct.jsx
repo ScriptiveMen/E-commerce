@@ -1,21 +1,30 @@
 import { useForm } from "react-hook-form";
 import { nanoid } from "nanoid";
+import { Link, useNavigate } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
 import { asyncCreateProduct } from "../../store/actions/ProductsAction";
 
 const AddProduct = () => {
-  const { register, handleSubmit, reset } = useForm();
+  const navigate = useNavigate();
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const dispatch = useDispatch();
 
   const AddProductHandler = async (product) => {
     product.id = nanoid();
     dispatch(asyncCreateProduct(product));
+    navigate("/products");
     reset();
   };
 
   return (
-    <div className="w-full min-h-[70vh]  md:min-h-[80vh] flex items-center md:justify-center">
+    <div className="w-full min-h-[70vh]  md:min-h-[80vh] flex items-center md:justify-center mb-20">
       <div className="flex w-full h-full  flex-col  gap-5 justify-between md:w-[40%] md:gap-9">
         <h1 className="text-4xl font-bold md:text-5xl tracking-tight">
           Add a new product
@@ -29,36 +38,59 @@ const AddProduct = () => {
             <label htmlFor="title">Product title</label>
             <input
               className="bg-[#ebe8e1] p-2 outline-0"
-              {...register("title")}
+              {...register("title", {
+                required: "Product title is required",
+                minLength: { value: 3, message: "Minimum 3 characters" },
+              })}
               type="text"
               placeholder="Enter product title here"
               id="title"
               name="title"
             />
+            {errors.title && (
+              <small className="text-red-500">{errors.title.message}</small>
+            )}
           </div>
 
           <div className="flex flex-col w-full">
             <label htmlFor="price">Product price</label>
             <input
               className="bg-[#ebe8e1] p-2 outline-0"
-              {...register("price")}
+              {...register("price", {
+                required: "Product price is required",
+                min: { value: 1, message: "Price must be positive" },
+                validate: (value) =>
+                  Number.isInteger(Number(value)) ||
+                  "Only whole numbers allowed",
+              })}
               type="text"
               placeholder="Enter product price here"
               id="price"
               name="price"
             />
+            {errors.price && (
+              <small className="text-red-500">{errors.price.message}</small>
+            )}
           </div>
 
           <div className="flex flex-col w-full">
             <label htmlFor="description">Product description</label>
             <textarea
               className="bg-[#ebe8e1] p-2 outline-0 resize-none"
-              {...register("description")}
+              {...register("description", {
+                required: "Product description is required",
+                minLength: { value: 10, message: "Minimum 10 characters" },
+              })}
               type="text"
               placeholder="Enter product description here"
               id="description"
               name="description"
             />
+            {errors.description && (
+              <small className="text-red-500">
+                {errors.description.message}
+              </small>
+            )}
           </div>
 
           <div className="flex flex-col w-full">
@@ -80,16 +112,21 @@ const AddProduct = () => {
             <label htmlFor="image">Product image</label>
             <input
               className="bg-[#ebe8e1] p-2 outline-0"
-              {...register("image")}
+              {...register("image", {
+                required: "Product image URL is required",
+              })}
               type="url"
               placeholder="Enter product's image url"
               id="image"
               name="image"
             />
+            {errors.image && (
+              <small className="text-red-500">{errors.image.message}</small>
+            )}
           </div>
 
           <button
-            className="px-5 py-2 rounded-lg bg-black text-white"
+            className="px-5 py-2 rounded-lg hover:scale-95 duration-200 cursor-pointer bg-black text-white"
             type="submit"
           >
             Add Product

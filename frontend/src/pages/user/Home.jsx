@@ -64,7 +64,10 @@ const Home = () => {
             src="/images/hero1-1.avif"
             alt=""
           />
-          <Link className="border border-white text-white px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold transition-all duration-400 ease-in-out hover:bg-white hover:text-black">
+          <Link
+            to="/products"
+            className="border border-white text-white px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold transition-all duration-400 ease-in-out hover:bg-white hover:text-black"
+          >
             Buy now
           </Link>
 
@@ -78,7 +81,10 @@ const Home = () => {
             src="/images/hero1-2.avif"
             alt=""
           />
-          <Link className="border border-white text-white px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold transition-all duration-400 ease-in-out hover:bg-white hover:text-black">
+          <Link
+            to="/products"
+            className="border border-white text-white px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold transition-all duration-400 ease-in-out hover:bg-white hover:text-black"
+          >
             Buy now
           </Link>
         </div>
@@ -89,7 +95,10 @@ const Home = () => {
             alt=""
           />
 
-          <Link className="border border-white text-white px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold transition-all duration-400 ease-in-out hover:bg-white hover:text-black">
+          <Link
+            to="/products"
+            className="border border-white text-white px-2 py-0.5 top-1 right-1 text-sm  md:px-5 md:py-2 rounded-3xl absolute z-0 md:top-4 md:right-4 font-bold transition-all duration-400 ease-in-out hover:bg-white hover:text-black"
+          >
             Buy now
           </Link>
         </div>
@@ -99,7 +108,10 @@ const Home = () => {
 
       <div className="hero3 mt-9 md:mt-15  w-full flex items-center justify-between gap-2">
         <div className="left  flex flex-col w-[58%]  gap-3 md:gap-6">
-          <Link className="transition-all duration-400 ease-in-out hover:bg-black hover:text-white text-sm px-3 w-max py-1 rounded-3xl border border-gray-300 md:text-lg">
+          <Link
+            to="/products"
+            className="transition-all duration-400 ease-in-out hover:bg-black hover:text-white text-sm px-3 w-max py-1 rounded-3xl border border-gray-300 md:text-lg"
+          >
             See More product
           </Link>
           <h1 className="text-2xl pb-5 font-black md:text-5xl md:w-[47%]">
@@ -112,7 +124,10 @@ const Home = () => {
             we do not divide our collectios to seasons we create new models
             every week.
           </p>
-          <Link className="transition-all duration-400 ease-in-out hover:bg-black hover:text-white text-sm px-3 py-1 w-max rounded-3xl border border-gray-300 md:text-lg">
+          <Link
+            to="/products"
+            className="transition-all duration-400 ease-in-out hover:bg-black hover:text-white text-sm px-3 py-1 w-max rounded-3xl border border-gray-300 md:text-lg"
+          >
             Shop Now
           </Link>
         </div>

@@ -9,7 +9,16 @@ const ManageProducts = () => {
   });
 
   return products?.length > 0 ? (
-    <div className="bg-red-300 flex items-center flex-wrap justify-center gap-3 md:justify-start">
+    <div className="bg-red-300 flex items-center flex-wrap justify-center gap-3 md:justify-start mb-20">
+      <div className="w-full pb-5">
+        <h1 className="md:text-6xl text-4xl font-black py-2">
+          Manage Products
+        </h1>
+        <p className="font-thin w-[70%] md:w-[26%]  md:text-lg text-gray-600 py-3 md:py-4">
+          Add, update, or remove products. Monitor inventory and keep your
+          catalog fresh and up-to-date.
+        </p>
+      </div>
       {renderproducts}
     </div>
   ) : (

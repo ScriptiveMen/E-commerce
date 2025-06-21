@@ -10,8 +10,8 @@ const Products = () => {
     return <ProductCard key={product.id} product={product} />;
   });
 
-  return products?.length > 0 ? (
-    <div className="flex items-center flex-wrap justify-center  gap-3 md:justify-start">
+  return (
+    <div className="flex items-center flex-wrap justify-center  gap-3 mb-15">
       <div className="w-full relative h-[40vh] rounded-xl overflow-hidden mb-5">
         <img
           className="h-full w-full object-cover "
@@ -19,8 +19,8 @@ const Products = () => {
           alt=""
         />
 
-        <div className="absolute top-10 left-5 md:w-[20%] ">
-          <h2 className=" text-white md:text-5xl font-black leading-13">
+        <div className="absolute top-5 md:top-10 left-5 md:w-[20%] w-[50%] ">
+          <h2 className=" text-white text-3xl md:text-5xl font-black md:leading-13 ">
             Best Leather Bag Collection For You
           </h2>
           <p className="font-thin w-full md:text-lg text-gray-300 py-3 md:py-4">
@@ -54,10 +54,14 @@ const Products = () => {
         </div>
       </div>
 
-      {renderproducts}
+      {products?.length > 0 ? (
+        <>{renderproducts}</>
+      ) : (
+        <>
+          <h1>No products available</h1>
+        </>
+      )}
     </div>
-  ) : (
-    <h1>No products available</h1>
   );
 };
 

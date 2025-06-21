@@ -5,7 +5,6 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PageNotFound from "../pages/PageNotFound";
 import ProductDetails from "../pages/ProductDetail";
-import UnAuthorised from "../pages/UnAuthorised";
 import About from "../pages/user/About";
 import Profile from "../pages/user/Profile";
 import Cart from "../pages/user/Cart";
@@ -89,7 +88,6 @@ const Mainroutes = () => {
 
       {/* global routes */}
       <Route path="*" element={<PageNotFound />}></Route>
-      <Route path="/unauthorized" element={<UnAuthorised />}></Route>
       <Route
         path="/products/view-details/:id"
         element={<ProductDetails />}

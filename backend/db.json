@@ -4,7 +4,7 @@
       "id": "0",
       "username": "Satya Kumar Ram",
       "email": "satya@kr.com",
-      "password": "000",
+      "password": "000000",
       "isAdmin": true
     },
     {
@@ -13,7 +13,7 @@
       "phonenumber": "",
       "username": "imtiyaz",
       "email": "imtiyaz@imt.com",
-      "password": "999",
+      "password": "999999",
       "isAdmin": false,
       "cart": [
         {
@@ -25,47 +25,107 @@
             "category": "kid's clothing",
             "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHNoaXJ0fGVufDB8fDB8fHww"
           },
-          "quantity": 2
+          "quantity": 3
         },
         {
           "product": {
-            "id": "0",
-            "title": "Mens Cotton Jacket",
-            "price": 55.99,
-            "description": "Stay stylish and comfortable with our Men's Cotton Jacket, designed for all-season wear. Made from premium-quality cotton, this jacket offers a breathable, soft-touch feel while ensuring durability and long-lasting use. The lightweight fabric makes it ideal for spring, autumn, and mild winter days, providing just the right amount of warmth without overheating. It features a classic front zipper closure, multiple spacious pockets for utility and convenience, and a sleek collar design for a modern look. The inner lining adds extra comfort, while adjustable cuffs offer a customized fit. Available in a range of neutral colors and sizes, this jacket easily pairs with jeans, chinos, or casual trousers, making it a versatile addition to any wardrobe. Whether you're heading to work, traveling, or enjoying a casual day out, this cotton jacket combines functionality and fashion effortlessly. It's the perfect everyday outerwear for the modern man.",
+            "id": "MRajcTf7lO4nb0BeJczNl",
+            "title": "Girl's dress",
+            "price": "1000",
+            "description": "hdhdhdjjdjfdsf",
+            "category": "woman's clothing",
+            "image": "https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvbiUyMGRyZXNzfGVufDB8fDB8fHww"
+          },
+          "quantity": 1
+        },
+        {
+          "product": {
+            "id": "TMHHjYU2HuT9k5RJcvdjH",
+            "title": "Classic Men's White Shirt",
+            "price": "899",
+            "description": "Every wardrobe needs a Classic White Shirt, and this one delivers premium quality with everyday style. Tailored from breathable cotton, it offers a crisp look perfect for formal meetings or casual outings. The slim-fit cut flatters your shape while allowing comfortable movement. With buttoned cuffs and a sharp collar, this shirt pairs effortlessly with jeans or trousers. It’s machine washable, easy to maintain, and ideal for layering under blazers or wearing on its own for a clean, polished look.",
             "category": "men's clothing",
-            "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+            "image": "https://plus.unsplash.com/premium_photo-1727942416727-9f16462ef11b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D"
           },
           "quantity": 1
         }
       ],
       "wishlist": []
+    },
+    {
+      "id": "AP8SL5YCKbrITN8FQVM8F",
+      "name": "rohit raj",
+      "phonenumber": "7050557533",
+      "username": "Rohitraj90",
+      "email": "rohitraj08872@gmail.com",
+      "password": "rohitraj7050",
+      "isAdmin": false,
+      "cart": [],
+      "wishlist": []
+    },
+    {
+      "id": "2Lv5E4xUld0Nft3pq3fTF",
+      "name": "riyan toppo",
+      "phonenumber": "9749589211",
+      "username": "Riyan0987",
+      "email": "riyantoppo16@gmail.com",
+      "password": "riyantoppo",
+      "isAdmin": false,
+      "cart": [],
+      "wishlist": []
+    },
+    {
+      "id": "ildpyTdkIL57ZtfcM_B8B",
+      "name": "Ariyan Saha",
+      "phonenumber": "",
+      "username": "ariyan_saha",
+      "email": "ariyansaha85@gmail.com",
+      "password": "777777",
+      "isAdmin": false,
+      "cart": [],
+      "wishlist": []
     }
   ],
   "products": [
     {
-      "id": "0",
-      "title": "Mens Cotton Jacket",
-      "price": 55.99,
-      "description": "Stay stylish and comfortable with our Men's Cotton Jacket, designed for all-season wear. Made from premium-quality cotton, this jacket offers a breathable, soft-touch feel while ensuring durability and long-lasting use. The lightweight fabric makes it ideal for spring, autumn, and mild winter days, providing just the right amount of warmth without overheating. It features a classic front zipper closure, multiple spacious pockets for utility and convenience, and a sleek collar design for a modern look. The inner lining adds extra comfort, while adjustable cuffs offer a customized fit. Available in a range of neutral colors and sizes, this jacket easily pairs with jeans, chinos, or casual trousers, making it a versatile addition to any wardrobe. Whether you're heading to work, traveling, or enjoying a casual day out, this cotton jacket combines functionality and fashion effortlessly. It's the perfect everyday outerwear for the modern man.",
+      "id": "TMHHjYU2HuT9k5RJcvdjH",
+      "title": "Classic Men's White Shirt",
+      "price": "899",
+      "description": "Every wardrobe needs a Classic White Shirt, and this one delivers premium quality with everyday style. Tailored from breathable cotton, it offers a crisp look perfect for formal meetings or casual outings. The slim-fit cut flatters your shape while allowing comfortable movement. With buttoned cuffs and a sharp collar, this shirt pairs effortlessly with jeans or trousers. It’s machine washable, easy to maintain, and ideal for layering under blazers or wearing on its own for a clean, polished look.",
       "category": "men's clothing",
-      "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+      "image": "https://plus.unsplash.com/premium_photo-1727942416727-9f16462ef11b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fHw%3D"
     },
     {
-      "id": "xrfNBvjNUJ44HJdPipPzr",
-      "title": "Cotton Vest Boys",
-      "price": "100",
-      "description": "Very cool and comfortable to wear",
-      "category": "kid's clothing",
-      "image": "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHNoaXJ0fGVufDB8fDB8fHww"
+      "id": "Tk25qC0UtuZwwhmVfpdqr",
+      "title": "Denim Jacket",
+      "price": "1399",
+      "description": "This rugged yet stylish Men's Denim Jacket is a timeless wardrobe staple. Designed with a relaxed fit, dual chest pockets, and buttoned front, it brings effortless edge to your look. The durable denim fabric offers a structured feel and keeps you warm during transitional weather. Pair it with a white t-shirt and boots for a classic vibe, or layer over a hoodie for a modern twist. It’s perfect for travel, casual days, or night outs.",
+      "category": "men's clothing",
+      "image": "https://images.unsplash.com/photo-1614697688184-66a55d41e298?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fERlbmltJTIwSmFja2V0fGVufDB8fDB8fHww"
     },
     {
-      "id": "MRajcTf7lO4nb0BeJczNl",
-      "title": "hdhdheueue",
+      "id": "If8VG2RRv0dhZFHjzKsmx",
+      "title": "Casual Sports Hoodie",
       "price": "999",
-      "description": "hdhdhdjjdj",
+      "description": "Our Casual Men's Hoodie offers unmatched comfort and a sporty aesthetic. Made from a soft blend of cotton and polyester, this hoodie features a drawstring hood, front kangaroo pocket, and ribbed cuffs and hem. It’s perfect for workouts, travel, or just lounging at home. The minimal branding and solid color design make it a versatile option for any casual outfit. Easy to maintain and machine washable, it’s a daily go-to for men on the move.",
+      "category": "men's clothing",
+      "image": "https://plus.unsplash.com/premium_photo-1727967194091-05d5f317f77e?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fENhc3VhbCUyMFNwb3J0cyUyMEhvb2RpZXxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+      "id": "I_7ePwLtPdWgAQqH4e9SL",
+      "title": "Women's Summer Floral Dress",
+      "price": "1399",
+      "description": "Celebrate sunny days with our Women's Summer Floral Dress, designed for ease and beauty. The soft, flowing fabric drapes effortlessly and keeps you cool in warmer weather. Featuring adjustable straps, a flared silhouette, and delicate floral patterns, this dress adds charm to any occasion. Whether you're at the beach, brunch, or a casual day out, it provides a flattering fit and all-day comfort. Lightweight and breathable, it’s the perfect summer essential.",
       "category": "woman's clothing",
-      "image": "https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvbiUyMGRyZXNzfGVufDB8fDB8fHww"
+      "image": "https://images.unsplash.com/photo-1652212029659-771ff516b0b9?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8V29tZW4ncyUyMEZsb3JhbCUyMFN1bW1lciUyMERyZXNzfGVufDB8fDB8fHww"
+    },
+    {
+      "id": "XEOLK8sClGK-lMj0vhm_v",
+      "title": "Boys' Cotton Casual Shirt",
+      "price": "799",
+      "description": "Upgrade your child’s wardrobe with this Boys' Cotton Casual Shirt, tailored for both comfort and style. Crafted from soft, breathable cotton, it features a classic checkered design, button-up front, and a relaxed fit—perfect for playdates or family outings. The durable stitching ensures long-lasting wear, while the vibrant colors make it fun to wear all day.",
+      "category": "kid's clothing",
+      "image": "https://images.unsplash.com/photo-1664982803698-b6b514e9928b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEJveXMnJTIwQ290dG9uJTIwQ2FzdWFsJTIwU2hpcnR8ZW58MHx8MHx8fDA%3D"
     }
   ]
 }

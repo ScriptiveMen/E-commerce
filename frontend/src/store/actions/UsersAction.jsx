@@ -64,3 +64,11 @@ export const asyncDeleteUser = (id) => async (dispatch, getState) => {
     toast.error("Something went wrong!");
   }
 };
+
+export const asyncDeleteAllUser = (id) => async (dispatch, getState) => {
+  try {
+    await axios.delete("/users/" + id);
+  } catch (error) {
+    toast.error("Something went wrong!");
+  }
+};

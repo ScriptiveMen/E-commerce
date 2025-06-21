@@ -12,13 +12,17 @@ const Profile = () => {
   const user = useSelector((state) => state.userReducer.users);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { register, handleSubmit } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     defaultValues: {
       name: user?.name,
       username: user?.username,
       email: user?.email,
       password: user?.password,
-      phonenumber: user?.phonenumber ? user?.phonenumber : "Not Set",
+      phonenumber: user?.phonenumber && user?.phonenumber,
     },
   });
   const UpdateUserHandler = (newuser) => {
@@ -34,6 +38,11 @@ const Profile = () => {
 
   return (
     <div className="w-full  min-h-[70vh] md:min-h-[90vh] flex flex-col items-center md:justify-center gap-10">
+      <div className="w-full ">
+        <h1 className="md:text-6xl text-4xl font-black py-2">
+          Account Details
+        </h1>
+      </div>
       <div className="top h-full w-full flex items-center bottom mt-5  gap-5 md:w-[40%] md:gap-4">
         <div className="photo h-30 w-30 rounded-full bg-gray-500 shadow flex items-center justify-center text-5xl text-white">
           {user.name[0].toUpperCase()}
@@ -69,58 +78,110 @@ const Profile = () => {
             <label htmlFor="name">Fullname</label>
             <input
               className="bg-[#ebe8e1] p-2 outline-0"
-              {...register("name")}
+              {...register("name", {
+                required: "Full Name is required",
+                minLength: { value: 3, message: "At least 3 characters" },
+              })}
               type="text"
               placeholder="Enter your fullname"
               id="name"
               name="name"
             />
+            {errors?.name && (
+              <small className="text-red-400">{errors.name.message}</small>
+            )}
           </div>
 
           <div className="flex flex-col w-full">
             <label htmlFor="phonenumber">Contact Number </label>
             <input
               className="bg-[#ebe8e1] p-2 outline-0"
-              {...register("phonenumber")}
+              {...register("phonenumber", {
+                pattern: {
+                  value: /^[0-9]+$/,
+                  message: "Only numeric values are allowed",
+                },
+                maxLength: {
+                  value: 10,
+                  message: "Phone number must be exactly 10 digits",
+                },
+                minLength: {
+                  value: 10,
+                  message: "Phone number must be exactly 10 digits",
+                },
+              })}
               type="tel"
               placeholder="Enter your contact number"
               id="phonenumber"
               name="phonenumber"
             />
+            {errors?.phonenumber && (
+              <small className="text-red-400">
+                {errors.phonenumber.message}
+              </small>
+            )}
           </div>
 
           <div className="flex flex-col w-full">
             <label htmlFor="username">Create Username</label>
             <input
               className="bg-[#ebe8e1] p-2 outline-0"
-              {...register("username")}
+              {...register("username", {
+                required: "Username is required",
+                pattern: {
+                  value: /^[a-zA-Z0-9_]+$/,
+                  message:
+                    "Username can only contain letters, numbers, and underscores",
+                },
+              })}
               type="text"
               placeholder="Enter your username"
               id="username"
               name="username"
             />
+            {errors?.username && (
+              <small className="text-red-400">{errors.username.message}</small>
+            )}
           </div>
 
           <div className="flex flex-col w-full">
             <label htmlFor="email">Email address</label>
             <input
               className="bg-[#ebe8e1] p-2 outline-0"
-              {...register("email")}
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^\S+@\S+\.\S+$/,
+                  message: "Invalid email format",
+                },
+              })}
               type="text"
               placeholder="Enter your email address"
               id="email"
               name="email"
             />
+            {errors?.email && (
+              <small className="text-red-400">{errors.email.message}</small>
+            )}
           </div>
           <div className="flex flex-col w-full ">
             <label htmlFor="password">Create New Password</label>
             <input
               className="bg-[#ebe8e1] p-2 outline-0"
               placeholder="Enter your password here"
-              {...register("password")}
+              {...register("password", {
+                required: "Password is required",
+                minLength: {
+                  value: 6,
+                  message: "Password must be at least 6 characters",
+                },
+              })}
               type="text"
               id="password"
             />
+            {errors?.password && (
+              <small className="text-red-400">{errors.password.message}</small>
+            )}
           </div>
 
           <div className="flex items-center justify-center gap-2">
@@ -128,14 +189,14 @@ const Profile = () => {
               className="px-5 py-2 rounded-lg cursor-pointer hover:scale-95 duration-200 bg-black text-white"
               type="submit"
             >
-              Update Profile
+              Update Account
             </button>
             <button
               onClick={DeleteUserHandler}
               className="px-5 py-2 rounded-lg cursor-pointer hover:scale-95 duration-200 bg-red-600 text-white"
               type="button"
             >
-              Delete Profile
+              Delete Account
             </button>
           </div>
         </form>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="w-full min-h-max ">
+    <div className="w-full min-h-max mb-4 ">
       <div className="top md:h-[75vh] md:py-5 w-full flex flex-col md:flex-row items-center  gap-4">
         <div className="left  h-[50vh] w-full md:h-full md:w-1/2 overflow-hidden  rounded-xl">
           <img
@@ -45,7 +45,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="bottom mt-5 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
+      <div className="bottom mt-5 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 pb-10">
         <div className="bg-red-100 relative w-full h-[23vh] md:w-[30%] overflow-hidden rounded-xl p-5 flex flex-col justify-between">
           <h2 className="text-2xl font-bold md:text-3xl">
             100% Authentic Product
