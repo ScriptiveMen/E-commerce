@@ -12,7 +12,7 @@ const Cart = () => {
   });
 
   return (
-    <div className="h-full w-full  flex flex-col items-center gap-4">
+    <div className="h-[100vh] w-full  flex flex-col items-center gap-4 mb-60">
       <div className="w-full">
         <h1 className="md:text-6xl text-4xl font-black py-2">Your Cart</h1>
         <p className="font-thin w-[70%] md:w-[24%]  md:text-lg text-gray-600 py-3 md:py-4">

@@ -28,7 +28,6 @@ const Profile = () => {
   const UpdateUserHandler = (newuser) => {
     dispatch(asyncUpdateUser(user.id, newuser));
     toast.success("Profile Updated");
-    navigate("/");
   };
 
   const DeleteUserHandler = () => {
@@ -37,7 +36,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="w-full  min-h-[70vh] md:min-h-[90vh] flex flex-col items-center md:justify-center gap-10">
+    <div className="w-full  min-h-[70vh] mb-30 md:min-h-[90vh] flex flex-col items-center md:justify-center gap-10">
       <div className="w-full ">
         <h1 className="md:text-6xl text-4xl font-black py-2">
           Account Details

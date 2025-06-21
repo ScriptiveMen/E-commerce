@@ -1,10 +1,8 @@
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import axios from "../../api/apiconfig";
 import UsersCard from "../../components/UsersCard";
 
 const Users = () => {
-  // const user = useSelector((state) => state.userReducer.users);
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -34,7 +32,15 @@ const Users = () => {
         </p>
       </div>
 
-      <div className="flex flex-col items-center gap-4">{renderusers}</div>
+      {users.length > 0 ? (
+        <>
+          <div className="flex flex-col items-center gap-4">{renderusers}</div>
+        </>
+      ) : (
+        <>
+          <h1>No Registered Users yet.</h1>
+        </>
+      )}
     </div>
   );
 };

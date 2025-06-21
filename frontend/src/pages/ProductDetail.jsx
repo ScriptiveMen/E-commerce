@@ -23,7 +23,7 @@ const ProductDetail = () => {
   };
 
   return singleproduct ? (
-    <div className="w-full h-[80vh] flex flex-col md:flex-row gap-3">
+    <div className="w-full h-[100vh] flex flex-col md:flex-row gap-3 mb-20">
       <div className=" w-full h-[45%] md:h-[80%] rounded-lg overflow-hidden md:w-1/2 top">
         <img
           className="aspect-[1/1] w-full object-cover object-center rounded-lg"
@@ -58,7 +58,7 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <div className="btn w-full flex  items-center justify-end gap-3">
+          <div className="btn w-full flex  items-center justify-end gap-3 mb-10">
             {user?.isAdmin ? (
               <>
                 <button

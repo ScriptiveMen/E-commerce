@@ -2,16 +2,42 @@ import { Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 import ProductCard from "../../components/ProductCard";
+import { Suspense, useEffect, useState } from "react";
+import axios from "../../api/apiconfig";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const Products = () => {
-  const { products } = useSelector((state) => state.productReducer);
+  // const { products } = useSelector((state) => state.productReducer);
+
+  const [products, setproducts] = useState([]);
+  const [hasMore, sethasMore] = useState(true);
+
+  const fetchdata = async () => {
+    try {
+      let { data } = await axios.get(
+        `/products?_limit=5&_start=${products.length}`
+      );
+      if (data.length == 0) {
+        sethasMore(false);
+      } else {
+        sethasMore(true);
+        setproducts([...products, ...data]);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchdata();
+  }, []);
 
   const renderproducts = products.map((product) => {
     return <ProductCard key={product.id} product={product} />;
   });
 
   return (
-    <div className="flex items-center flex-wrap justify-center  gap-3 mb-15">
+    <div className="flex min-h-[100vh] items-center flex-wrap justify-center  gap-3 mb-15">
       <div className="w-full relative h-[40vh] rounded-xl overflow-hidden mb-5">
         <img
           className="h-full w-full object-cover "
@@ -54,13 +80,26 @@ const Products = () => {
         </div>
       </div>
 
-      {products?.length > 0 ? (
-        <>{renderproducts}</>
-      ) : (
-        <>
-          <h1>No products available</h1>
-        </>
-      )}
+      <Suspense fallback={<h2>Loading products...</h2>}>
+        {products?.length > 0 ? (
+          <InfiniteScroll
+            className="flex items-center flex-wrap justify-center gap-3"
+            dataLength={products.length}
+            next={fetchdata}
+            hasMore={hasMore}
+            loader={<h4>Please wait...</h4>}
+            endMessage={
+              <p style={{ textAlign: "center" }}>
+                <b className="mt-5">You caught up all!</b>
+              </p>
+            }
+          >
+            {renderproducts}
+          </InfiniteScroll>
+        ) : (
+          <h2 className="text-xl text-gray-500 py-5">No products available</h2>
+        )}
+      </Suspense>
     </div>
   );
 };

@@ -1,20 +1,24 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import { lazy } from "react";
+
 import Home from "../pages/user/Home";
-import Products from "../pages/user/Products";
-import Login from "../pages/Login";
-import Register from "../pages/Register";
-import PageNotFound from "../pages/PageNotFound";
-import ProductDetails from "../pages/ProductDetail";
-import About from "../pages/user/About";
-import Profile from "../pages/user/Profile";
-import Cart from "../pages/user/Cart";
-import AddProduct from "../pages/admin/AddProduct";
-import ManageProducts from "../pages/admin/ManageProducts";
-import Users from "../pages/admin/Users";
+
+const Cart = lazy(() => import("../pages/user/Cart"));
+const Products = lazy(() => import("../pages/user/Products"));
+const Login = lazy(() => import("../pages/Login"));
+const Register = lazy(() => import("../pages/Register"));
+const PageNotFound = lazy(() => import("../pages/PageNotFound"));
+const About = lazy(() => import("../pages/user/About"));
+const ProductDetails = lazy(() => import("../pages/ProductDetail"));
+const Profile = lazy(() => import("../pages/user/Profile"));
+const AddProduct = lazy(() => import("../pages/admin/AddProduct"));
+const ManageProducts = lazy(() => import("../pages/admin/ManageProducts"));
+const Users = lazy(() => import("../pages/admin/Users"));
+const UpdateProduct = lazy(() => import("../pages/admin/UpdateProduct"));
+const AuthAdmin = lazy(() => import("./AuthAdmin"));
+const AuthUser = lazy(() => import("./AuthUser"));
+
 import { useSelector } from "react-redux";
-import UpdateProduct from "../pages/admin/UpdateProduct";
-import AuthAdmin from "./AuthAdmin";
-import AuthUser from "./AuthUser";
 
 const Mainroutes = () => {
   const user = useSelector((state) => state.userReducer.users);
